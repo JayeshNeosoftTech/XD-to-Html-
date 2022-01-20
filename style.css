@@ -1,9 +1,15 @@
+html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    width: 100%;
+}
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 .navbar{
     width: 100%;
     height: 85px;
@@ -85,6 +91,11 @@ body{
     margin: 0px 6px 0px 6px;
     cursor: pointer;
 }
+#EN option{
+    text-align: center;
+    font-family: "Fira Sans", sans-serif;
+    color: #505050;
+}
 .colorbtn{
     margin: 0px 4px;
     width: 15px;
@@ -107,6 +118,54 @@ body{
 #search-icon{
     border: none;
     background: none;
+    cursor: pointer;
+}
+#searchIn{
+    margin: 0px 0px 0px 15px;
+    width: 300px;
+    height: 20px;
+}
+.popupS{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#popupC{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+#search-icon1{
+    margin-left: -5px;
+    margin-top: 17px;
+    height: 28px;
+}
+#i-icon1{
+    font-size: 17px;
+    color: #265781c2;
+}
+.close {
+    margin-top: -15px;
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 #i-icon{
     font-size: 18px;
@@ -300,6 +359,8 @@ body{
     background-color: #3F3531;
     display: flex;
     margin-top: 40px;
+    right: 0px;
+    width: 100%;
 }
 #VideoImg{
     position: absolute;
@@ -683,11 +744,15 @@ hr{
 
 /* Media query for screen 1280px */
 @media only screen and (max-width: 1280px) {
-    body{
+    html,body{
+        width: 100%;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
         box-sizing: border-box;
+    }
+    #divAn{
+        margin: 0px 0px 0px 80px;
     }
     #image1{
         margin-left: 50px;
@@ -698,21 +763,75 @@ hr{
     #first-a{
         margin: 16px 0px 0px 180px;
     }
+    #EN{
+        background: none;
+        border: none;
+        font-family: "Fira Sans", sans-serif;
+        color: #505050;
+        margin: 0px 6px 0px 6px;
+        cursor: pointer;
+    }
+    #EN option{
+        text-align: center;
+        font-family: "Fira Sans", sans-serif;
+        color: #505050;
+    }
+    #popupC{
+        background-color: #fefefe;
+        margin: auto;
+        padding: 18px;
+        border: 1px solid #888;
+        width: 25%;
+    }
+    #searchIn{
+        margin: 0px 0px 0px 15px;
+        width: 250px;
+        height: 21px;
+    }
+    #search-icon1{
+        margin-left: -5px;
+        margin-top: 19px;
+        height: 28px;
+    }
+    #i-icon1{
+        font-size: 17px;
+        color: #265781c2;
+    }
+    .close {
+        margin-top: -15px;
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+      
+    .close:hover,.close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
     #second-a{
         margin: 14px 0px 0px 100px;
     }
+    #FImgDiv{
+        width: 100%;
+        height: 559px;
+        display: flex;
+        overflow-x: hidden;
+        /* position: relative; */
+    }
+    #flexImage{
+        width: 100%;
+    }
     #box{
-        margin-left: 600px;
+        margin-left: 630px;
     }
     #SecDiv{
-        margin: 90px 0px 0px 150px;
+        margin: 90px 0px 0px 170px;
         width: fit-content;
-        border: solid greenyellow 1px;
-        /* width: 900px; */
     }
     #Types{
-        margin-left: 150px;
-        border: solid greenyellow 1px;
+        margin-left: 170px;
     }
     #sec1{
         margin-left: 0px;
@@ -722,32 +841,15 @@ hr{
     }
 
     #AboutUsDiv{
-        margin: 46px 0px 0px 320px;
-        width: 410px;
+        margin: 46px 0px 0px 330px;
+        width: 470px;
         height: fit-content;
-        border: greenyellow 1px solid;
     }
 
     #footerDiv1{
-        margin: 25px 0px 0px 50px;
+        margin: 25px 0px 0px 80px;
     }
     #footerDiv2{
-        margin-left: 25px;
-    }
-
-    .navbar{
-        border: greenyellow 1px solid;
-    }
-
-    #fonts-lang-color{
-        border: greenyellow 1px solid;
-    }
-    #second-a{
-        border: greenyellow 1px solid;
-    }
-    #flexImage{
-        width: 1280px;
-        border: greenyellow 1px solid;
-        overflow-x: none;
+        margin-left: 30px;
     }
   }
