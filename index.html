@@ -14,10 +14,10 @@
     <body>
         <div class="navbar">
             <div id="image1">
-            <img src="Image 1.png" alt="logo">
+            <a href="#"><img src="Image 1.png" alt="logo"></a>
             </div>
             <div id="logo-text">
-            VIDARBHA IRRIGATION <br> DEVELOPMENT CORPORATION
+            <a href="#">VIDARBHA IRRIGATION <br> DEVELOPMENT CORPORATION</a>
             </div>
             <div id="divAn">
             <div id="divAnIn">
@@ -31,13 +31,26 @@
                 <button class="fbtn" id="fontA">A</button>
                 <button class="fbtn" id="fontA3">A+</button>
                 <span class="span1">|</span>
-                <button id="EN">EN <i class="fa fa-caret-down"></i></button>
+                <!-- <button id="EN">EN <i class="fa fa-caret-down"></i></button> -->
+                <select name="lang" id="EN">
+                    <option value="EN">EN</option>
+                    <option value="HN">HN</option>
+                    <option value="MR">MR</option>
+                    <option value="FR">FR</option>
+                </select>
                 <span class="span1">|</span>
                 <button class="colorbtn" id="colorbtn1" onclick="document.bgColor='#265781'"></button>
                 <button class="colorbtn" id="colorbtn2" onclick="document.bgColor='#52B27B'"></button>
                 <button class="colorbtn" id="colorbtn3" onclick="document.bgColor='#F2E162'"></button>
                 <span class="span1">|</span>
                 <button id="search-icon"><i class="fa fa-search" id="i-icon"></i></button>
+                <div id="popupS" class="popupS">
+                    <div id="popupC">
+                    <input type="text" placeholder="Search.." name="search" id="searchIn">
+                    <button id="search-icon1" type="submit"><i class="fa fa-search" id="i-icon1"></i></button>
+                    <span class="close">&times;</span>
+                    </div>
+                </div>
             </div>
             </div>
             <div id="second-a">
@@ -120,10 +133,10 @@
            <div id="footer_Bg">
                 <div id="footerDiv1">
                     <h2 id="footerDiv1_H2">Subscribe to our Newsletters</h2>
-                    <div id="EmailDiv">
+                    <!-- <div id="EmailDiv"> -->
                         <input type="text" placeholder="Enter Email ID" id="EmailIn">
                         <button id="SBbtn">SUBSCRIBE NOW</button>
-                    </div>
+                    <!-- </div> -->
                     <section id="footerDSec1">
                         <h3 id="Sec1H3">ABOUT US</h3>
                         <ul id="Sec1Ul">
@@ -190,5 +203,33 @@
                 </div>
            </div>
         </footer>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("popupS");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("search-icon");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+            </script>
     </body>
 </html>
